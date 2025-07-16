@@ -9,14 +9,5 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.1.6
       
-      - name: Deploy over FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.2.0
-        with:
-          server: hosting171047.ae861.netcup.net
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /httpdocs/sandberg-camping.de/production/httpdocs
-          local-dir: ./
-          
