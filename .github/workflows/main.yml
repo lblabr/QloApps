@@ -8,9 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      - name: Deploy over FTP
+        uses: SamKirkland/FTP-Deploy-Action@3.2.0
         with:
-          ftp-server: sftp://hosting171047.ae861.netcup.net/httpdocs/sandberg-camping.de/production/httpdocs/
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: hosting171047.ae861.netcup.net
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /httpdocs/sandberg-camping.de/production/httpdocs
+          local-dir: ./
+          
