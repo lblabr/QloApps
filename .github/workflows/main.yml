@@ -13,5 +13,5 @@ jobs:
         server: hosting171047.ae861.netcup.net
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /httpdocs/sandberg-camping.de/production/httpdocs
+        server-dir: /httpdocs/sandberg-camping.de/production/httpdocs/
         local-dir: ./
